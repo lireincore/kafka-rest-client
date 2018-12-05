@@ -18,6 +18,11 @@ class Client
     public const TYPE_KAFKA_BINARY = 'application/vnd.kafka.binary.v2+json';
 
     /**
+     * @var string
+     */
+    private $restHost;
+
+    /**
      * @var ClientInterface
      */
     private $client;
@@ -33,42 +38,29 @@ class Client
     private $streamFactory;
 
     /**
-     * @var string
-     */
-    private $restHost;
-
-    /**
-     * @var string|null
-     */
-    private $schemaHost;
-
-    /**
      * @var LoggerInterface
      */
     private $logger;
 
     /**
+     * @param string $restHost
      * @param ClientInterface $client
      * @param RequestFactoryInterface $requestFactory
      * @param StreamFactoryInterface $streamFactory
-     * @param string $restHost
-     * @param string|null $schemaHost
      * @param LoggerInterface|null $logger
      */
     public function __construct(
+        string $restHost,
         ClientInterface $client,
         RequestFactoryInterface $requestFactory,
         StreamFactoryInterface $streamFactory,
-        string $restHost,
-        ?string $schemaHost = null,
         ?LoggerInterface $logger = null
     )
     {
+        $this->restHost = $restHost;
         $this->client = $client;
         $this->requestFactory = $requestFactory;
         $this->streamFactory = $streamFactory;
-        $this->restHost = $restHost;
-        $this->schemaHost = $schemaHost;
         $this->logger = $logger;
     }
 
@@ -86,14 +78,6 @@ class Client
     public function restHost() : string
     {
         return $this->restHost;
-    }
-
-    /**
-     * @param string $schemaHost
-     */
-    public function setSchemaHost(string $schemaHost) : void
-    {
-        $this->schemaHost = $schemaHost;
     }
 
     /**

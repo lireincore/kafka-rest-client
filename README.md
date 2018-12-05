@@ -38,7 +38,7 @@ use LireinCore\KafkaRestClient\Request\GetMessagesRequest;
 //$requestFactory implements Psr\Http\Message\RequestFactoryInterface
 //$streamFactory implements Psr\Http\Message\StreamFactoryInterface
 //$logger implements Psr\Log\LoggerInterface
-$kafkaClient = new Client($client, $requestFactory, $streamFactory, 'rest-host:8082', null, $logger);
+$kafkaClient = new Client('rest-host:8082', $client, $requestFactory, $streamFactory, $logger);
 
 //produce message
 $producer = new Producer($kafkaClient);
