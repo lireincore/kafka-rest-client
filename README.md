@@ -6,7 +6,7 @@
 
 ## About
 
-Kafka rest client for confluent rest proxy
+Kafka rest client for confluent rest proxy v2
 
 ## Install
 
@@ -30,9 +30,9 @@ use LireinCore\KafkaRestClient\Producer;
 use LireinCore\KafkaRestClient\Consumer;
 use LireinCore\KafkaRestClient\KafkaRestException;
 use LireinCore\KafkaRestClient\Request\SendMessagesRequest;
-use LireinCore\KafkaRestClient\Request\ConsumerCreateRequest
-use LireinCore\KafkaRestClient\Request\ConsumerAssignmentRequest
-use LireinCore\KafkaRestClient\Request\GetMessagesRequest
+use LireinCore\KafkaRestClient\Request\ConsumerCreateRequest;
+use LireinCore\KafkaRestClient\Request\ConsumerAssignmentRequest;
+use LireinCore\KafkaRestClient\Request\GetMessagesRequest;
 
 //$client implements Psr\Http\Client\ClientInterface
 //$requestFactory implements Psr\Http\Message\RequestFactoryInterface
