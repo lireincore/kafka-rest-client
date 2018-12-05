@@ -1,8 +1,8 @@
 # Kafka rest client
 
-[![Latest Stable Version](https://poser.pugx.org/lireincore/imgcache/v/stable)](https://packagist.org/packages/lireincore/imgcache)
-[![Total Downloads](https://poser.pugx.org/lireincore/imgcache/downloads)](https://packagist.org/packages/lireincore/imgcache)
-[![License](https://poser.pugx.org/lireincore/imgcache/license)](https://packagist.org/packages/lireincore/imgcache)
+[![Latest Stable Version](https://poser.pugx.org/lireincore/kafka-rest-client/v/stable)](https://packagist.org/packages/lireincore/kafka-rest-client)
+[![Total Downloads](https://poser.pugx.org/lireincore/kafka-rest-client/downloads)](https://packagist.org/packages/lireincore/kafka-rest-client)
+[![License](https://poser.pugx.org/lireincore/kafka-rest-client/license)](https://packagist.org/packages/lireincore/kafka-rest-client)
 
 ## About
 
@@ -15,7 +15,7 @@ Add the `"lireincore/kafka-rest-proxy": "dev-master"` package to your `require` 
 or
 
 ``` bash
-$ php composer.phar require lireincore/imgcache dev-master
+$ php composer.phar require lireincore/kafka-rest-proxy dev-master
 ```
 
 ## Usage
@@ -30,6 +30,9 @@ use LireinCore\KafkaRestClient\Producer;
 use LireinCore\KafkaRestClient\Consumer;
 use LireinCore\KafkaRestClient\KafkaRestException;
 use LireinCore\KafkaRestClient\Request\SendMessagesRequest;
+use LireinCore\KafkaRestClient\Request\ConsumerCreateRequest
+use LireinCore\KafkaRestClient\Request\ConsumerAssignmentRequest
+use LireinCore\KafkaRestClient\Request\GetMessagesRequest
 
 //$client implements Psr\Http\Client\ClientInterface
 //$requestFactory implements Psr\Http\Message\RequestFactoryInterface
