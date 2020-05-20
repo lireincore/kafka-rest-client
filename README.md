@@ -10,12 +10,12 @@ Kafka rest client for confluent rest proxy v2
 
 ## Install
 
-Add the `"lireincore/kafka-rest-proxy": "dev-master"` package to your `require` section in the `composer.json` file
+Add the `"lireincore/kafka-rest-client": "dev-master"` package to your `require` section in the `composer.json` file
 
 or
 
 ``` bash
-$ php composer.phar require lireincore/kafka-rest-proxy dev-master
+$ php composer.phar require lireincore/kafka-rest-client dev-master
 ```
 
 ## Usage
