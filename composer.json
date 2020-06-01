@@ -2,6 +2,7 @@
     "name": "lireincore/kafka-rest-client",
     "description": "Kafka rest client",
     "type": "library",
+    "version": "1.0.0",
     "keywords": ["kafka", "rest", "client", "confluent", "proxy"],
     "homepage": "https://github.com/lireincore/kafka-rest-client",
     "license": "MIT",
